@@ -27,7 +27,11 @@ const Container = () => {
         settranscation(data)
     }
 const fetchdatabyuser=async(user)=>{
-  const Response=  await fetch('https://expense-backend-6hi0.onrender.com/fetchdatabyusername')
+  const Response=  await fetch('https://expense-backend-6hi0.onrender.com/fetchdatabyusername',{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({user})
+  })
    const data=await Response.json();
    settranscation(data)
 }
