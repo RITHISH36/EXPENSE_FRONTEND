@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 const Expenseform = (props) => {
     const [title, settitle] = useState("")
     const [amount, setamount] = useState("")
+    const[user,setuser]=useState("")
     const { addExpense, edititems, updateExpense ,setititems} = props
     const handleinputachange = (el) => {
         settitle(el.target.value)
     }
     const handleamountchange = (el) => {
         setamount(el.target.value)
+    }
+    const handelusername=(el)=>{
+        setuser(el.target.value)
     }
     const handlesumbit = (el) => {
         el.preventDefault()
@@ -18,8 +22,9 @@ const Expenseform = (props) => {
         }
         else {
             
-            addExpense(title, amount)
+            addExpense(user,title, amount)
         }
+        
 
     }
     useEffect(() => {
@@ -29,6 +34,10 @@ const Expenseform = (props) => {
     return (<div className="Expense-form">
         <h4>{edititems ? "Edit" : "Add"}Transcation</h4>
         <form onSubmit={handlesumbit}>
+            <div>
+                <label htmlFor="user">USER</label>
+                <input type="text" id="user" name="user" value={user} onChange={handelusername} />
+            </div>
             <div>
                 <label htmlFor="Title">Title</label>
                 <input type="text" id="title" name="title" value={title} onChange={handleinputachange} />

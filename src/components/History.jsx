@@ -2,11 +2,11 @@ import ExpenseItem from "./ExpenseItem";
 import { useState } from "react";
 import Container from "./Container";
 const History = (props) => {
-    const { transcation, deleteExpense, editExpense,filter} = props
+    const { transcation, deleteExpense, editExpense,fetchdatabyuser} = props
     console.log(transcation)
     const[search,setsearch]=useState("")
     const handlesearch=()=>{
-       filter(transcation.title);
+       fetchdatabyuser(search)
     }
      const handlesearchange=(el)=>{
        setsearch(el.target.value)
