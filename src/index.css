@@ -1,0 +1,140 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+body {
+  background-color: #edf4fc;
+}
+
+.container {
+  max-width: 400px;
+  padding: 10px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+
+}
+
+.expense-item {
+  border: 1px solid black;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.expense-item.positive {
+  border-right: 4px solid green;
+}
+
+.expense-item.negative {
+  border-right: 4px solid red;
+}
+
+.expense-item.positive .amount {
+  color: green;
+}
+
+.expense-item.negative .amount {
+  color: red;
+}
+
+.Expense-form {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.Expense-form h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.Expense-form input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.Expense-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #7318b5;
+}
+.balance-container{
+  background-color: #7318b5;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.currency-item{
+  background-color:#9d63c6;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  width: 30%;
+  box-sizing: border-box;
+}
+.currency-item .title{
+text-transform: uppercase;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1px;
+text-align: center;
+}
+.currency-item .amount{
+  text-align: center;
+}
+.amount.green{
+  color: #88ec4b;
+}
+.amount.red{
+  color: #b83858;
+}
+.expense-item{
+  position: relative;
+}
+.btn-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.392);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 5px;
+}
+.expense-item:hover .btn-container{
+  opacity: 1;
+}
+.delete-btn{
+  background-color: red;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.edit-btn{
+   background-color:lightgray;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
