@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { toast } from "react-toastify/unstyled";
+import { toast } from "react-toastify";
 
 const Loginform=()=>{
     const [username,setusername]=useState("")
@@ -17,7 +17,7 @@ const Loginform=()=>{
        information(username,password)
     }
     const information=async(username,password)=>{
-            const res= await fetch('http://localhost:3000/insertdatauser',{
+            const res= await fetch('https://expense-backend-6hi0.onrender.com/insertdatauser',{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password})
@@ -27,7 +27,7 @@ const Loginform=()=>{
              if(res.ok){
                Navigate("/expense");
              }
-             else if(res.status===400){
+             else {
                 toast.error("user not valid")
              }
     }
