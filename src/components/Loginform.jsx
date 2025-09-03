@@ -11,8 +11,14 @@ const Loginform=()=>{
     }
     const handlesubmit =(el)=>{
         el.preventDefault()
-        console.log(username)
-        console.log(password)
+       information(username,password)
+    }
+    const information=async(username,password)=>{
+             await fetch('https://expense-backend-6hi0.onrender.com/insertdatauser',{
+                method:"POST",
+                headers:{"Content-Type":"application/json"},
+                body:JSON.stringify({username,password})
+             })
     }
 
     return(<>
