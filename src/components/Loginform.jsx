@@ -17,7 +17,7 @@ const Loginform=()=>{
        information(username,password)
     }
     const information=async(username,password)=>{
-             await fetch('https://expense-backend-6hi0.onrender.com/insertdatauser',{
+             await fetch('http://localhost:3000/insertdatauser',{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password})
