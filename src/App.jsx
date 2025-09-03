@@ -1,6 +1,7 @@
 import Container from "./components/Container";
 import Card from "./components/Container";
 import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 import Loginform from "./components/Loginform";
 import { BrowserRouter, Routes, Route } from "react-router";
 const App = () => {
@@ -8,8 +9,8 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Loginform />} />
-          <Route path="/" element={<Container />} />
+          <Route path="/" element={<Loginform />} />
+          <Route path="/expense" element={<Container />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />

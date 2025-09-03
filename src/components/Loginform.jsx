@@ -17,17 +17,18 @@ const Loginform=()=>{
        information(username,password)
     }
     const information=async(username,password)=>{
-             await fetch('http://localhost:3000/insertdatauser',{
+            const res= await fetch('http://localhost:3000/insertdatauser',{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password})
                 
              })
+             console.log(res)
              if(res.ok){
-               Navigate("/login");
+               Navigate("/expense");
              }
-             else{
-                toast.error("user id or password is wrong")
+             else if(res.status===400){
+                toast.error("user not valid")
              }
     }
 
