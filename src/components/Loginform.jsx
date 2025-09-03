@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { toast } from "react-toastify/unstyled";
 
 const Loginform=()=>{
     const [username,setusername]=useState("")
     const [password,setpassword]=useState("")
+    const Navigate=useNavigate();
     const handleusername =(el)=>{
         setusername(el.target.value)
     }
@@ -18,7 +21,14 @@ const Loginform=()=>{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password})
+                
              })
+             if(res.ok){
+               Navigate("/login");
+             }
+             else{
+                toast.error("user id or password is wrong")
+             }
     }
 
     return(<>
