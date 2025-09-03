@@ -1,18 +1,34 @@
+import { useState } from "react";
+
 const Loginform=()=>{
+    const [username,setusername]=useState("")
+    const [password,setpassword]=useState("")
+    const handleusername =(el)=>{
+        setusername(el.target.value)
+    }
+    const handlepassword=(el)=>{
+        setpassword(el.target.value)
+    }
+    const handlesubmit =(el)=>{
+        el.preventDefault()
+        console.log(username)
+        console.log(password)
+    }
+
     return(<>
     <div className="login-container">
         <div>
             <form>
                 <div className="login-username">
             <label htmlFor="username">ENTER USERNAME</label>
-            <input type="text" placeholder="Enter your username" />
+            <input type="text" placeholder="Enter your username" value={username} onChange={handleusername}/>
             </div>
             <div className="login-password">
             <label htmlFor="password">PASSWORD</label>
-            <input type="password" placeholder="enter your password"/>
+            <input type="password" placeholder="enter your password" value={password} onChange={handlepassword}/>
             </div>
             <div className="login-submit">
-                <button type="submit">LOGIN</button>
+                <button type="submit" onClick={handlesubmit}>LOGIN</button>
             </div>
             </form>
         </div>
