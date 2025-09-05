@@ -73,7 +73,8 @@ h2 {
   cursor: pointer;
   background-color: #7318b5;
 }
-.balance-container{
+
+.balance-container {
   background-color: #7318b5;
   border-radius: 5px;
   padding: 10px;
@@ -81,34 +82,41 @@ h2 {
   justify-content: space-around;
 
 }
-.currency-item{
-  background-color:#9d63c6;
+
+.currency-item {
+  background-color: #9d63c6;
   padding: 10px;
   border-radius: 5px;
   color: white;
   width: 30%;
   box-sizing: border-box;
 }
-.currency-item .title{
-text-transform: uppercase;
-font-size: 11px;
-font-weight: bold;
-letter-spacing: 1px;
-text-align: center;
-}
-.currency-item .amount{
+
+.currency-item .title {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-align: center;
 }
-.amount.green{
+
+.currency-item .amount {
+  text-align: center;
+}
+
+.amount.green {
   color: #88ec4b;
 }
-.amount.red{
+
+.amount.red {
   color: #b83858;
 }
-.expense-item{
+
+.expense-item {
   position: relative;
 }
-.btn-container{
+
+.btn-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -121,29 +129,146 @@ text-align: center;
   opacity: 0;
   border-radius: 5px;
 }
-.expense-item:hover .btn-container{
+
+.expense-item:hover .btn-container {
   opacity: 1;
 }
-.delete-btn{
+
+.delete-btn {
   background-color: red;
   border: none;
   padding: 5px;
   color: white;
   border-radius: 5px;
 }
-.edit-btn{
-   background-color:lightgray;
+
+.edit-btn {
+  background-color: lightgray;
   border: none;
   padding: 5px;
   color: white;
   border-radius: 5px;
 }
-.login-container{
-  max-width:50%;
+
+.login-container {
+  max-width: 30%;
   margin: auto;
   padding: 5%;
   background-color: white;
   border-radius: 10px;
+}
 
+.login-container input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.sign-top {
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.login-top {
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: -5%;
+
+}
+
+.login-submit button {
+  background-color: rgb(237, 184, 85);
+  border-radius: 5px;
+}
+
+.signup {
+  margin-top: 5%;
+}
+
+.newtoexpense {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.newtoexpense hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.newtoexpense span {
+  color: #555;
+  font-size: 14px;
+}
+
+.signup button {
+  border: 1px solid black;
+  border-radius: 3px;
+  z-index: 9999px;
+}
+
+.logo {
+  width: 40%;
+  object-fit: cover;
+  margin-left: 30%;
+}
+
+.filter-search input {
+  width: 90%;
+  padding: 8px 10px;
+}
+
+.filter-search button {
+  width: 30%;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 30px;
+  background-color: #7318b5;
+  margin-left: 32%;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.filter-search button:hover {
+  background-color: #cea2ed;
+}
+.newpass-top{
+  margin-left: -10%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+.login-password span{
+margin-left: 55%;
+}
+.forgetpassword{
+  text-decoration: none;
+  color: #6da0e2;
+}
+.setting{
+  margin-left: 95%;
+  cursor: pointer;
+}
+
+.setbar{
+  background-color:#7318b5;
+  margin-left: 89%;
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+}
+.logout{
+  text-decoration: none;
+  color: white;
 }
