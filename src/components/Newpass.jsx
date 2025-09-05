@@ -47,7 +47,7 @@ const Navigate=useNavigate()
     return (
         <>
             <div className="login-container">
-                 <img src="\public\unnamed.png" alt="ExpenseTracker" className="logo" />
+                 <img src="/unnamed.png" alt="ExpenseTracker" className="logo" />
                 <form>
                      <h2 className="newpass-top">Create new password</h2>
                     <div>

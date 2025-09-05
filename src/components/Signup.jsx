@@ -36,7 +36,7 @@ const Signup = () => {
     }
     return (<>
         <div className="login-container">
-            <img src="\public\unnamed.png" alt="ExpenseTracker" className="logo" />
+            <img src="/unnamed.png" alt="ExpenseTracker" className="logo" />
             <div>
                 <form>
                     <h2 className="sign-top">Create Account</h2>

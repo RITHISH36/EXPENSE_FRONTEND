@@ -29,7 +29,7 @@ const Changepass = () => {
   return (
     <>
       <div className="login-container">
-         <img src="\public\unnamed.png" alt="ExpenseTracker" className="logo" />
+         <img src="/unnamed.png" alt="ExpenseTracker" className="logo" />
         <form>
            <h2 className="login-top">Login</h2>
           <div>

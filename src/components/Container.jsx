@@ -86,7 +86,7 @@ const Container = () => {
                     <NavLink to="/" onClick={logout} className="logout">Logout</NavLink>
                 </div>):null}
                 </nav>
-                <img src="\public\unnamed.png" alt="ExpenseTracker" className="logo" />
+                <img src="/unnamed.png" alt="ExpenseTracker" className="logo" />
 
                 <Balancecontainer transcation={transcation} />
                 <History transcation={transcation} deleteExpense={deleteExpense} editExpense={editExpense} fetchdataname={fetchdataname} />
